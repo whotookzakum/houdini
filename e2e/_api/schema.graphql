@@ -51,8 +51,9 @@ input UserNameFilter {
 }
 
 type Query {
+	viewer: User
 	avgYearsBirthDate: Float!
-	node(id: ID!): Node
+	node(id: ID!, delay: Int): Node
 	user(id: ID!, snapshot: String!, tmp: Boolean, delay: Int, forceNullDate: Boolean): User!
 	usersConnection(
 		after: String
