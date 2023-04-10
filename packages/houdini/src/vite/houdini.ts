@@ -106,6 +106,16 @@ export default function Plugin(opts: PluginConfig = {}): VitePlugin {
 				}
 			}
 		},
+
+		async configureServer(args) {
+			for (const plugin of config.plugins) {
+				if (typeof plugin.vite?.configureServer !== 'function') {
+					continue
+				}
+
+				await plugin.vite!.configureServer.call(this, { ...args, houdiniConfig: config })
+			}
+		},
 	}
 }
 
