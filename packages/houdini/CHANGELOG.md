@@ -1,5 +1,11 @@
 # houdini
 
+## 1.2.0
+
+### Patch Changes
+
+-   [#1049](https://github.com/HoudiniGraphql/houdini/pull/1049) [`7161781`](https://github.com/HoudiniGraphql/houdini/commit/71617814116ce4ead9fce2c7aeef2391a952f8a5) Thanks [@devunt](https://github.com/devunt)! - Send `operationName` along with the `query` and `variables` by default.
+
 ## 1.1.7
 
 ### ✨ Features
