@@ -283,7 +283,9 @@ export type PluginHooks = {
 				}
 			) => Promise<LoadResult> | LoadResult
 		>
-		configureServer: (server: ViteDevServer & { houdiniConfig: Config }) => void | Promise<void>
+		configureServer?: (
+			server: ViteDevServer & { houdiniConfig: Config }
+		) => void | Promise<void>
 	}
 }
 
